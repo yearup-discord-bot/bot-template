@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "log-timestamp": "^0.3.0"
+  }
+}
