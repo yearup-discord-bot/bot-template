@@ -30,9 +30,9 @@ module.exports = {
 				}
 				break;
 			}
-			console.log("failed to find class @" + now);
-			await interaction.reply({content: this.zoom_links["no"], ephemeral: true});
 		}
+		console.log("failed to find class @ " + now);
+		await interaction.reply({content: this.zoom_links["no"], ephemeral: true});
 	},
 	date_thresholds: {
 		"first" : [new Date().setHours(8), new Date().setHours(9, 50)],
