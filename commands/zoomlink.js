@@ -14,7 +14,7 @@ module.exports = {
 		let track = interaction.options.getString('track');
 		let now = new Date();
 		let epoch = now.getTime();
-		let msg = "This is the zoom link to class right now: ";
+		let msg = "This is the zoom link for class right now: ";
 
 		for (const key in this.date_thresholds)
 		{
@@ -30,6 +30,8 @@ module.exports = {
 				}
 				break;
 			}
+			console.log("failed to find class @" + now);
+			await interaction.reply({content: this.zoom_links["no"], ephemeral: true});
 		}
 	},
 	date_thresholds: {
