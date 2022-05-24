@@ -41,7 +41,7 @@ module.exports = {
 		"fourth" : [new Date().setHours(13, 50), new Date().setHours(15, 30)]
 	},
 	zoom_links: {
-		no:			"No school chillax.",
+		no:			"No class right now, chillax.",
 		mmk:		"https://yearup.zoom.us/j/96949846942",
 		bill:		"https://zoom.us/my/bill.newman",
 		dan:		"https://zoom.us/j/94020008562?pwd=RUlUcDVzYlpPQkdDNFZ5THh5MldnQT09",
