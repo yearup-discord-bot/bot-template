@@ -18,6 +18,7 @@ module.exports = {
 
 		for (const key in this.date_thresholds)
 		{
+			console.log(this.date_thresholds[key][0] + " - " + this.date_thresholds[key][1] + " : " + epoch);
 			if (epoch >= this.date_thresholds[key][0] && epoch < this.date_thresholds[key][1])
 			{
 				if (track === "app_dev")
@@ -28,9 +29,10 @@ module.exports = {
 				{
 					await interaction.reply({content: msg + this.zoom_links[this.qa_links[key][now.getDay()]], ephemeral: true});
 				}
-				break;
+				return;
 			}
 		}
+
 		console.log("failed to find class @ " + now);
 		await interaction.reply({content: this.zoom_links["no"], ephemeral: true});
 	},
