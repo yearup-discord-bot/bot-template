@@ -18,7 +18,6 @@ module.exports = {
 
 		for (const key in this.date_thresholds)
 		{
-			console.log(this.date_thresholds[key][0] + " - " + this.date_thresholds[key][1] + " : " + epoch);
 			if (epoch >= this.date_thresholds[key][0] && epoch < this.date_thresholds[key][1])
 			{
 				if (track === "app_dev")
@@ -37,7 +36,7 @@ module.exports = {
 		await interaction.reply({content: this.zoom_links["no"], ephemeral: true});
 	},
 	date_thresholds: {
-		"first" : [new Date().setHours(8), new Date().setHours(9, 50)],
+		"first" : [new Date().setHours(8, 0), new Date().setHours(9, 50)],
 		"second" : [new Date().setHours(9, 50), new Date().setHours(11, 30)],
 		"third" : [new Date().setHours(11, 30), new Date().setHours(13, 50)],
 		"fourth" : [new Date().setHours(13, 50), new Date().setHours(15, 30)]
